@@ -52,6 +52,7 @@ describe('ConnectorStates', function () {
     it('dispatch message', function (done) {
         var neuron = new Helpers.MockedNeuron();
         var client = new ConnectorClient(neuron);
+        var context = { k: 'v' };
         var states = new ConnectorStates(client, {
             master: {
                 enter: function () {
@@ -61,12 +62,15 @@ describe('ConnectorStates', function () {
                 },
 
                 'msg:hello': function (msg, src) {
+                    var context = this;
                     Try.final(function () {
                         assert.equal(src, 'me');
                         assert.deepEqual(msg, { event: 'hello', data: 'world' });
+                        assert.equal(context.k, 'v');
                     }, done);
                 }
-            }
+            },
+            context: context
         });
         states.start();
         neuron.publish('connector', 'state', { state: 'master' });
@@ -75,14 +79,18 @@ describe('ConnectorStates', function () {
     it('process general requests', function (done) {
         var neuron = new Helpers.MockedNeuron();
         var client = new ConnectorClient(neuron);
+        var context = { k: 'v' };
         var states = new ConnectorStates(client, {
             default: {
                 'fn:abc': function (value) {
+                    var context = this;
                     Try.final(function () {
                         assert.equal(value, 321);
+                        assert.equal(context.k, 'v');
                     }, done);
                 }
-            }
+            },
+            context: context
         });
         states.start();
         states.process('abc', 321);
