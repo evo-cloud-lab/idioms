@@ -1,0 +1,35 @@
+{
+    "name": "evo-idioms",
+    "description": "Evo Cloud Common Frameworks",
+    "version": "0.0.1",
+    "author": "Yisui Hu <easeway@gmail.com>",
+    "scripts": {
+        "test": "mocha --reporter spec test/*-test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/evo-cloud/idioms"
+    },
+    "main": "./index.js",
+    "dependencies": {
+        "evo-elements": "0.0.3",
+        "evo-neuron": "0.0.3",
+        "js-class": "0.0.2",
+        "underscore": "1.5.1",
+        "async": "0.2.9"
+    },
+    "devDependencies": {
+        "mocha": "1.12.0",
+        "sandboxed-module": "0.2.1"
+    },
+    "engines": {
+        "node": ">=0.10",
+        "npm": "1"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/evo-cloud/idioms/raw/master/LICENSE"
+        }
+    ]
+}
