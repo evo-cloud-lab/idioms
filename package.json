@@ -13,8 +13,8 @@
     },
     "main": "./index.js",
     "dependencies": {
-        "evo-elements": "git://github.com/evo-cloud/elements",
-        "evo-neuron": "git://github.com/evo-cloud/neuron",
+        "evo-elements": "https://github.com/evo-cloud/elements",
+        "evo-neuron": "https://github.com/evo-cloud/neuron",
         "js-class": "0.0.2",
         "underscore": "1.5.1",
         "async": "0.2.9",
