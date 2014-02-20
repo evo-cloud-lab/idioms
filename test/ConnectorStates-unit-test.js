@@ -1,5 +1,5 @@
 var assert = require('assert'),
-    Try    = require('evo-elements').Try,
+    Try    = require('js-flow').Try,
 
     Helpers = require('./Helpers'),
     ConnectorClient = require('../index').ConnectorClient,
