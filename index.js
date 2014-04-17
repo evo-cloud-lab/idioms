@@ -8,6 +8,7 @@ module.exports = {
     NeuronClient:       require('./lib/NeuronClient'),
     ConnectorClient:    require('./lib/ConnectorClient'),
     ConnectorStates:    require('./lib/ConnectorStates'),
+    StatesClient:       require('./lib/StatesClient'),
     GovernorClient:     require('./lib/GovernorClient'),
     EntityStore:        require('./lib/EntityStore'),
     Entity:             require('./lib/Entity'),
