@@ -9,6 +9,7 @@ module.exports = {
     ConnectorClient:    require('./lib/ConnectorClient'),
     ConnectorStates:    require('./lib/ConnectorStates'),
     StatesClient:       require('./lib/StatesClient'),
+    SyncedState:        require('./lib/SyncedState'),
     GovernorClient:     require('./lib/GovernorClient'),
     EntityStore:        require('./lib/EntityStore'),
     Entity:             require('./lib/Entity'),
